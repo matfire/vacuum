@@ -1,5 +1,5 @@
 import { direction, rotationSides } from "./types";
-import {allowedCommands} from "./config.json"
+import { allowedCommands } from "./config.json";
 export class Vacuum {
   private grid: { x: number; y: number };
   private position: number[];
@@ -15,9 +15,9 @@ export class Vacuum {
     const currentDirectionIndex = directions.indexOf(this.direction);
     let newDirectionIndex =
       side === "G" ? currentDirectionIndex - 1 : currentDirectionIndex + 1;
-      if (newDirectionIndex === -1) {
-        newDirectionIndex = directions.length - 1;
-      }
+    if (newDirectionIndex === -1) {
+      newDirectionIndex = directions.length - 1;
+    }
     const newDirection = directions[newDirectionIndex % 4];
     this.direction = newDirection as direction;
   }
@@ -25,12 +25,14 @@ export class Vacuum {
   private move() {
     switch (this.direction) {
       case "N": {
-        if (this.position[1] + 1 >= this.grid.y) throw new Error("Out of bounds");
+        if (this.position[1] + 1 >= this.grid.y)
+          throw new Error("Out of bounds");
         this.position[1] += 1;
         break;
       }
       case "E": {
-        if (this.position[0] + 1 >= this.grid.x) throw new Error("Out of bounds");
+        if (this.position[0] + 1 >= this.grid.x)
+          throw new Error("Out of bounds");
         this.position[0] += 1;
         break;
       }
