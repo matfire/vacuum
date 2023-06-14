@@ -20,4 +20,8 @@ describe("Complete run", () => {
         expect(vacuum.getPosition()).toEqual([1,2])
         expect(vacuum.getDirection()).toBe("E")
     })
+    test("invalid instructions", () => {
+        const vacuum = new Vacuum([2, 4], [0,0], "N")
+        expect(() => vacuum.run("AAZ")).toThrow("Invalid instruction")
+    })
 })
