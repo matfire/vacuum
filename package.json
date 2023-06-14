@@ -1,0 +1,24 @@
+{
+  "name": "yanport",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest",
+    "build": "tsc"
+  },
+  "bin": {
+    "vacuum": "./dist/src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tsc": "^2.0.4",
+    "vitest": "^0.32.0"
+  },
+  "dependencies": {
+    "commander": "^10.0.1",
+    "typescript": "^5.1.3"
+  }
+}
