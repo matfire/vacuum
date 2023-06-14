@@ -18,7 +18,7 @@ Program a vacuum to move inside a room
 ### From the command line
 
 - build the program using `npm run build`
-- execute the compiled files with `node dist/src/index.js`
+- execute the compiled files with `node dist/index.js`
 - add -h option to see execution instructions
 
 ### From another typescript file
